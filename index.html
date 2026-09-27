@@ -7,14 +7,14 @@
 
     <title>Sidney Martinez | Accounting, Process & Data</title>
 
-    <!-- Font Awesome -->
+    <!-- Icons -->
     <link rel="stylesheet"
           href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
 
     <style>
 
         /* =========================================================
-           BASE
+           BASIC SETUP
         ========================================================== */
 
         * {
@@ -57,7 +57,7 @@
 
 
         /* =========================================================
-           ANIMATIONS
+           LITTLE ANIMATIONS
         ========================================================== */
 
         @keyframes fadeUp {
@@ -132,6 +132,7 @@
             font-size: .82rem;
             text-transform: uppercase;
             letter-spacing: .8px;
+
             color: #ddd;
 
             transition: .2s ease;
@@ -143,7 +144,7 @@
 
 
         /* =========================================================
-           HERO
+           HOME / INTRO
         ========================================================== */
 
         .hero {
@@ -177,6 +178,7 @@
             margin-bottom: 1rem;
 
             opacity: 0;
+
             animation: fadeUp .9s ease forwards;
         }
 
@@ -242,7 +244,7 @@
 
 
         /* =========================================================
-           GENERAL SECTIONS
+           GENERAL SECTION STYLING
         ========================================================== */
 
         section {
@@ -298,7 +300,6 @@
 
         .expertise-grid {
             display: grid;
-
             grid-template-columns: repeat(3, 1fr);
 
             gap: 1.5rem;
@@ -311,8 +312,9 @@
 
             background: white;
 
-            transition: transform .2s ease,
-                        box-shadow .2s ease;
+            transition:
+                transform .2s ease,
+                box-shadow .2s ease;
         }
 
         .expertise-card:hover {
@@ -350,7 +352,7 @@
 
 
         /* =========================================================
-           ABOUT
+           ABOUT ME
         ========================================================== */
 
         #about {
@@ -445,7 +447,7 @@
 
 
         /* =========================================================
-           PROJECTS
+           SELECTED WORK
         ========================================================== */
 
         #projects {
@@ -460,8 +462,18 @@
             margin-bottom: 1rem;
         }
 
-        .project-heading span {
-            color: #777;
+        /*
+           The first half is intentionally gray.
+           The second half is darker so "build for Kinder Morgan"
+           gets the emphasis.
+        */
+
+        .project-heading .soft {
+            color: #999;
+        }
+
+        .project-heading .strong {
+            color: #222;
         }
 
         .projects-grid {
@@ -637,7 +649,7 @@
 
 
         /* =========================================================
-           PERSONAL / MUSIC
+           MUSIC PROJECT
         ========================================================== */
 
         #personal {
@@ -900,27 +912,29 @@
             <div class="hero-description">
 
                 <p>
-                    I'm an accountant in the energy industry with a strong
-                    interest in process improvement and technology. Here at
-                    Kinder Morgan, I work with complex AP processes while
-                    developing reports, automations, and analytical tools using
-                    SQL, Power Query, Excel, VBA, HTML/CSS, and other tools.
+                    I'm an energy-industry accountant focused on the
+                    intersection of accounting, process improvement, and tech!
+                    Here at Kinder Morgan, I work with complex AP processes
+                    while developing reporting, automation, and analytical
+                    solutions using SQL, Power Query, Excel, VBA, and other
+                    tools.
                 </p>
 
                 <p>
-                    My interest in business processes comes from working inside
-                    of them. I've seen firsthand how much of a difference better
-                    data, better systems, or even a small automation can make in
-                    someone's day-to-day work.
+                    My interest in business processes comes from seeing
+                    firsthand how better data, systems, and automation can
+                    improve someone's day-to-day work.
                 </p>
 
                 <p>
-                    I enjoy finding those opportunities and figuring out how we
-                    can make a process faster, more accurate, or simply easier
-                    for the people using it.
+                    I'm passionate about identifying opportunities where an
+                    investment in automation or process refinement can create
+                    solutions that save time, improve data quality, and make
+                    daily work easier for others.
                 </p>
 
             </div>
+
 
             <div class="hero-buttons">
 
@@ -961,8 +975,7 @@
         </p>
 
         <h2 class="fade-statement">
-            Where can I be useful?<br>
-            Usually, wherever there's a problem to solve.
+            Where can I be useful?
         </h2>
 
 
@@ -1000,7 +1013,7 @@
             </div>
 
 
-            <!-- TECHNOLOGY -->
+            <!-- DATA -->
 
             <div class="expertise-card">
 
@@ -1085,23 +1098,21 @@
         <div class="about-layout">
 
 
-            <!-- PHOTO -->
+            <!--
+                PHOTO
+
+                When you're ready:
+                1. Create an "images" folder in GitHub.
+                2. Upload your picture as sidney.jpg.
+                3. Delete the placeholder below.
+                4. Use:
+
+                <img src="images/sidney.jpg"
+                     alt="Sidney Martinez"
+                     class="about-photo">
+            -->
 
             <div class="about-photo-wrap">
-
-                <!--
-                    WHEN YOU HAVE YOUR PHOTO:
-
-                    1. Upload it to your GitHub repository.
-                    2. Put it inside an images folder.
-                    3. Delete the placeholder below.
-                    4. Replace it with:
-
-                    <img
-                        src="images/sidney.jpg"
-                        alt="Sidney Martinez"
-                        class="about-photo">
-                -->
 
                 <div class="photo-placeholder">
 
@@ -1121,13 +1132,13 @@
                     </span>
 
                     <span>
-                        probably thinking about budgets
-                        and SOX controls
+                        thinking about budgets and SOX controls
                     </span>
 
                 </div>
 
             </div>
+
 
 
             <!-- ABOUT TEXT -->
@@ -1141,63 +1152,37 @@
 
 
                 <p>
-                    I hold a BBA in Accounting with a minor in Finance,
-                    and I started my accounting career as a Gas Volume
-                    Accountant at Enterprise Products. That's where I
-                    built my foundation in the midstream energy industry
-                    and learned how closely operations, systems, data,
-                    and accounting all work together.
+                    I hold a BBA in Accounting and Finance and began my
+                    career as a Gas Volume Accountant, where I developed
+                    a strong foundation in the midstream energy industry.
                 </p>
 
 
                 <p>
-                    In Gas Accounting, I worked across areas including
-                    Contract Administration, Commercial, Liquids Volume
-                    Control, NGLs, and LNG. That experience gave me exposure
-                    to the operational side of the energy industry before
-                    I eventually moved into Accounts Payable.
+                    Before that, I worked in a variety of corporate roles
+                    while putting myself through college, including
+                    administrative, customer service, bookkeeping, and
+                    office management positions.
                 </p>
 
 
                 <p>
-                    My path here wasn't completely traditional. While
-                    putting myself through college, I worked in several
-                    different corporate roles, including administrative
-                    work, customer service, bookkeeping, and office
-                    management.
+                    Those experiences gave me a broad perspective on how
+                    organizations operate and sparked my interest in
+                    process improvement.
                 </p>
 
 
                 <p>
-                    Working in different parts of a business gave me an
-                    early appreciation for how processes affect the people
-                    actually doing the work.
+                    Over time, I moved from simply performing processes
+                    to questioning, analyzing, and improving them.
                 </p>
 
 
                 <p>
-                    Somewhere along the way, I became the person who
-                    couldn't just follow a process without asking why
-                    we were doing it that way. I started building reports,
-                    automating things I was tired of doing manually,
-                    digging into data when something didn't look right,
-                    and looking for ways to make our processes work a
-                    little better.
-                </p>
-
-
-                <p>
-                    Today, I'm pursuing my MBA with concentrations in
-                    Process Improvement and Project Management, continuing
-                    to build my technical skills, and preparing for the
-                    CPA exam.
-                </p>
-
-
-                <p>
-                    I'm especially interested in work that lets me combine
-                    those areas instead of choosing between accounting,
-                    technology, and process improvement.
+                    Today, I'm pursuing an MBA with a concentration in
+                    Process Improvement and Project Management, expanding
+                    my technical skills, and preparing for the CPA exam.
                 </p>
 
             </div>
@@ -1224,17 +1209,24 @@
 
 
         <h2 class="project-heading">
-            Kinder Morgan built up my skills.
-            <span>
+
+            <span class="soft">
+                Kinder Morgan built up my skills.
+            </span>
+
+            <br>
+
+            <span class="strong">
                 I've used them to build for Kinder Morgan.
             </span>
+
         </h2>
 
 
         <p class="section-intro">
-            These are some of the projects that started with me noticing
-            something that could work better and deciding to see what I
-            could do about it.
+            Most of these started the same way: I saw something that
+            wasn't working as well as it could and wanted to see if
+            there was a better way to do it.
         </p>
 
 
@@ -1261,26 +1253,17 @@
 
 
                 <p>
-                    This was one of the first projects where I realized
-                    I could use the tools I already had to solve a much
-                    bigger problem.
+                    We were paying for third-party software to detect
+                    potential duplicate payments. The results were only
+                    available for review once a week, and the data needed
+                    quite a bit of work before it was practical to use.
                 </p>
 
 
                 <p>
-                    At the time, we were paying for third-party software
-                    to detect potential duplicate payments. The results
-                    were only available for review once a week, required
-                    significant adjustment before the data was practical
-                    to work with, and didn't give us the flexibility I
-                    wanted for day-to-day review.
-                </p>
-
-
-                <p>
-                    I took the useful detection metrics from that process,
-                    added criteria tailored specifically to Kinder Morgan,
-                    and recreated the functionality internally.
+                    I took the detection metrics that were useful, added
+                    some criteria tailored specifically to Kinder Morgan,
+                    and recreated the process internally.
                 </p>
 
 
@@ -1288,6 +1271,13 @@
                     No fancy development environment. Just Excel,
                     Power Query, macros, VBA, and some admittedly
                     ridiculous Excel formulas.
+                </p>
+
+
+                <p>
+                    What started as one of my earliest attempts at
+                    automation became a tool we could actually shape
+                    around the way our team works.
                 </p>
 
 
@@ -1302,6 +1292,80 @@
                     <span class="tag">Macros</span>
 
                     <span class="tag">Payment Controls</span>
+
+                </div>
+
+            </article>
+
+
+
+            <!-- =================================================
+                 OPEN CREDIT ANALYSIS
+            ================================================== -->
+
+            <article class="project-card">
+
+                <p class="project-category">
+                    Financial Analysis & Recovery
+                </p>
+
+                <h3>
+                    AP Open Credit Analysis
+                </h3>
+
+                <p class="project-subtitle">
+                    Because taking a credit shouldn't require the stars
+                    to align.
+                </p>
+
+
+                <p>
+                    Our payment system is very protective of credits —
+                    sometimes a little too protective. A credit won't
+                    automatically apply against invoices unless several
+                    pieces of information line up exactly the way the
+                    system expects.
+                </p>
+
+
+                <p>
+                    That creates an interesting problem: we can have a
+                    perfectly valid credit available to us, but one small
+                    difference somewhere in the process can keep it from
+                    actually being used.
+                </p>
+
+
+                <p>
+                    I built an analysis process that helps me identify
+                    credits that are available to take but aren't moving
+                    through the normal payment process. From there, I can
+                    determine what doesn't align and where the process
+                    has broken down.
+                </p>
+
+
+                <p>
+                    Instead of treating open credits like a mystery,
+                    the report gives me a place to start: here's the
+                    credit, here's why it isn't being used, and here's
+                    what needs attention so we can get our money.
+                </p>
+
+
+                <div class="tags">
+
+                    <span class="tag">Financial Analysis</span>
+
+                    <span class="tag">Power Query</span>
+
+                    <span class="tag">Excel</span>
+
+                    <span class="tag">Open Credits</span>
+
+                    <span class="tag">Process Analysis</span>
+
+                    <span class="tag">Vendor Recovery</span>
 
                 </div>
 
@@ -1330,34 +1394,33 @@
 
                 <p>
                     Miskeys are one of the leading causes of the duplicate
-                    payments I see, but duplicate payments aren't the only
-                    risk. A small invoice-entry error can create payment
-                    problems, complicate vendor accounts, and cause issues
-                    much further down the road.
+                    payments I see, but duplicates aren't the only risk.
+                    A small invoice-entry error can create payment issues,
+                    complicate vendor accounts, and cause problems much
+                    further down the road.
                 </p>
 
 
                 <p>
-                    I wanted a way to find those errors without already
-                    knowing what I was looking for.
+                    I wanted to find those errors without already knowing
+                    exactly what I was looking for.
                 </p>
 
 
                 <p>
                     I developed reporting that analyzes invoice activity
                     for unusual patterns and potential miskeys. That
-                    included building measures such as outlier ratios,
-                    severity scoring, and other analytical metrics designed
-                    to identify records that behave differently from the
+                    included creating metrics such as outlier ratios,
+                    severity scoring, and other analytical measures to
+                    identify records that behave differently from the
                     surrounding data.
                 </p>
 
 
                 <p>
-                    The reporting has helped identify invoices requiring
-                    review and has contributed to the successful
+                    The analysis has contributed to the successful
                     cancellation and correction of more than
-                    <strong>$1 million in invoices.</strong>
+                    <strong>$1 million worth of invoices.</strong>
                 </p>
 
 
@@ -1391,6 +1454,7 @@
                     Process Improvement & Web Design
                 </p>
 
+
                 <span class="pending-label">
                     Pending — Website Still in Demo Stage
                 </span>
@@ -1399,6 +1463,12 @@
                 <h3>
                     AP Knowledge & Self-Service Website
                 </h3>
+
+
+                <p class="project-subtitle">
+                    Sometimes people don't need another email.
+                    They just need somewhere to find the answer.
+                </p>
 
 
                 <p>
@@ -1427,9 +1497,10 @@
                 <p>
                     I've also used Microsoft Lists, Forms, and Power
                     Automate to turn common AP requests into trackable
-                    workflows that function more like Jira tickets —
-                    giving requests a defined path instead of relying
-                    entirely on emails moving between inboxes.
+                    workflows that function more like Jira tickets.
+                    Instead of a request disappearing into an inbox,
+                    it can have a defined owner, status, and path to
+                    completion.
                 </p>
 
 
@@ -1481,7 +1552,7 @@
 
                 <p>
                     PCard activity creates a unique duplicate-payment
-                    challenge. The PCard system behaves much more like a
+                    problem. The PCard system behaves much more like a
                     bank statement, while AP contains the invoice and
                     payment activity we would normally use for duplicate
                     review.
@@ -1490,31 +1561,30 @@
 
                 <p>
                     During the latest audit, I identified that PCard
-                    transactions represented a significant source of
-                    duplicate-payment risk that previous review methods
-                    had not fully captured.
+                    transactions were a major source of duplication that
+                    previous review methods had not fully captured.
                 </p>
 
 
                 <p>
                     The problem was that the two sets of data weren't
-                    designed to match each other. Vendor names can be
-                    formatted differently between systems, so an exact
-                    match isn't enough.
+                    designed to match each other. Even something as
+                    basic as a vendor name can look completely different
+                    between the two systems.
                 </p>
 
 
                 <p>
                     I began developing a process to compare PCard and AP
-                    payment activity using fuzzy matching and approximate
-                    vendor-name matching, along with other transaction
-                    criteria.
+                    activity using fuzzy matching, approximate vendor-name
+                    matching, and other transaction criteria instead of
+                    relying on exact matches.
                 </p>
 
 
                 <p>
-                    The result has given us visibility into an area where
-                    we previously had very little ability to systematically
+                    That has given us visibility into an area where we
+                    previously had essentially no systematic way to
                     compare the two payment streams.
                 </p>
 
@@ -1554,8 +1624,8 @@
 
 
                 <p class="project-subtitle">
-                    Somewhere between the business process and the technology
-                    is usually where you'll find me.
+                    Somewhere between the business process and the
+                    technology is usually where you'll find me.
                 </p>
 
 
@@ -1634,9 +1704,11 @@
             Experience
         </p>
 
+
         <h2 class="section-title">
             I've spent my career learning how the pieces connect.
         </h2>
+
 
 
         <!-- KINDER MORGAN -->
@@ -1709,7 +1781,7 @@
                 </strong>
 
                 <p>
-                    Midstream Energy
+                    Houston, Texas
                 </p>
 
             </div>
@@ -1722,31 +1794,32 @@
                 </h3>
 
                 <h4>
-                    Gas Accounting
+                    Midstream Energy
                 </h4>
 
 
                 <p>
                     I started my accounting career in Gas Volume Accounting
                     at Enterprise Products, where I developed my foundation
-                    in midstream energy and learned how operational data
-                    eventually becomes accounting data.
+                    in the midstream energy industry.
                 </p>
 
 
                 <p>
-                    My work involved collaboration across areas including
-                    Contract Administration, Commercial, Liquids Volume
-                    Control, NGLs, and LNG, giving me exposure to both the
-                    accounting and operational sides of the business.
+                    My work involved collaboration across Contract
+                    Administration, Commercial, Liquids Volume Control,
+                    NGLs, LNG, and other operational groups. It gave me
+                    experience working with the people and data behind
+                    the accounting rather than seeing only the final
+                    numbers.
                 </p>
 
 
                 <p>
-                    That experience is still a major part of how I approach
-                    problems today: understanding where the data came from
-                    and what happened upstream before trying to fix what
-                    appears downstream.
+                    That experience is still a big part of how I approach
+                    problems today. I like understanding where the data
+                    came from and what happened upstream before trying
+                    to fix what appears downstream.
                 </p>
 
             </div>
@@ -1760,7 +1833,7 @@
 
 
 <!-- =============================================================
-     MUSIC / PERSONAL PROJECT
+     BEYOND THE SPREADSHEET
 ============================================================== -->
 
 <section id="personal">
@@ -1788,16 +1861,14 @@
 
 
                 <p class="section-intro">
-
                     One of my personal projects is tracking the music
-                    I listen to.
+                    I listen to. I use my listening history to find new
+                    artists and genres, explore my listening tastes, and
+                    see how my habits change over time.
 
-                    I use my listening history to find new artists and
-                    genres, explore my listening tastes, and see how my
-                    habits change over time.
+                    <br><br>
 
                     You'll never see me without my headphones.
-
                 </p>
 
 
@@ -1885,8 +1956,8 @@
                     </strong>
 
                     <span>
-                        Using my own history to figure out what I should
-                        listen to next
+                        Using my own history to figure out what I
+                        should listen to next
                     </span>
 
                 </div>
@@ -1922,6 +1993,8 @@
         <div class="education-grid">
 
 
+            <!-- MBA -->
+
             <div class="education-card">
 
                 <h3>
@@ -1946,6 +2019,8 @@
 
 
 
+            <!-- BBA -->
+
             <div class="education-card">
 
                 <h3>
@@ -1965,6 +2040,8 @@
             </div>
 
 
+
+            <!-- CPA -->
 
             <div class="education-card">
 
@@ -2012,9 +2089,7 @@
 
         <div class="footer-links">
 
-            <!--
-                Replace # with your actual links later.
-            -->
+            <!-- Replace these # links when you're ready -->
 
             <a href="#"
                aria-label="GitHub">
@@ -2053,4 +2128,5 @@
 
 
 </body>
+
 </html>
