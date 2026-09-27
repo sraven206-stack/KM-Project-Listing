@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -11,9 +12,10 @@
           href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
 
     <style>
-        /* =========================================
+
+        /* =========================================================
            BASE
-        ========================================== */
+        ========================================================== */
 
         * {
             box-sizing: border-box;
@@ -37,8 +39,11 @@
             text-decoration: none;
         }
 
-        h1, h2, h3, h4 {
-            line-height: 1.25;
+        h1,
+        h2,
+        h3,
+        h4 {
+            line-height: 1.2;
         }
 
         p {
@@ -51,16 +56,50 @@
         }
 
 
-        /* =========================================
+        /* =========================================================
+           ANIMATIONS
+        ========================================================== */
+
+        @keyframes fadeUp {
+
+            from {
+                opacity: 0;
+                transform: translateY(25px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+
+        @keyframes slideIn {
+
+            from {
+                opacity: 0;
+                transform: translateX(-30px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+
+
+        /* =========================================================
            NAVIGATION
-        ========================================== */
+        ========================================================== */
 
         nav {
             position: sticky;
             top: 0;
             z-index: 1000;
+
             background: #111;
             color: white;
+
             border-bottom: 1px solid #333;
         }
 
@@ -72,6 +111,7 @@
             display: flex;
             justify-content: space-between;
             align-items: center;
+
             gap: 2rem;
         }
 
@@ -82,16 +122,18 @@
 
         .nav-links {
             list-style: none;
+
             display: flex;
             gap: 1.6rem;
             flex-wrap: wrap;
         }
 
         .nav-links a {
-            font-size: .85rem;
+            font-size: .82rem;
             text-transform: uppercase;
-            letter-spacing: .7px;
+            letter-spacing: .8px;
             color: #ddd;
+
             transition: .2s ease;
         }
 
@@ -100,17 +142,18 @@
         }
 
 
-        /* =========================================
+        /* =========================================================
            HERO
-        ========================================== */
+        ========================================================== */
 
         .hero {
-            min-height: 85vh;
+            min-height: 88vh;
+
             background:
                 linear-gradient(
                     120deg,
-                    rgba(10,10,10,.96),
-                    rgba(30,30,30,.92)
+                    rgba(10, 10, 10, .98),
+                    rgba(32, 32, 32, .94)
                 );
 
             color: white;
@@ -121,50 +164,70 @@
 
         .hero-content {
             max-width: 900px;
-            padding: 100px 0;
+            padding: 110px 0;
         }
 
         .eyebrow {
             text-transform: uppercase;
             letter-spacing: 2px;
-            font-size: .8rem;
-            color: #bbb;
+
+            font-size: .78rem;
+            color: #aaa;
+
             margin-bottom: 1rem;
+
+            opacity: 0;
+            animation: fadeUp .9s ease forwards;
         }
 
         .hero h1 {
-            font-size: clamp(3rem, 8vw, 6rem);
-            margin-bottom: .5rem;
-            letter-spacing: -3px;
-        }
+            font-size: clamp(3.5rem, 9vw, 7rem);
+            letter-spacing: -4px;
 
-        .hero h2 {
-            font-size: clamp(1.3rem, 3vw, 2rem);
-            font-weight: 400;
-            color: #cfcfcf;
             margin-bottom: 2rem;
+
+            opacity: 0;
+
+            animation: fadeUp 1.2s ease forwards;
+            animation-delay: .25s;
         }
 
         .hero-description {
             max-width: 850px;
+
             font-size: 1.08rem;
-            color: #e0e0e0;
+            color: #dedede;
+
+            opacity: 0;
+
+            animation: fadeUp 1s ease forwards;
+            animation-delay: .75s;
         }
 
         .hero-buttons {
             display: flex;
-            gap: 1rem;
             flex-wrap: wrap;
+            gap: 1rem;
+
             margin-top: 2rem;
+
+            opacity: 0;
+
+            animation: fadeUp 1s ease forwards;
+            animation-delay: 1.1s;
         }
 
         .button {
             display: inline-block;
+
             padding: .85rem 1.4rem;
+
             border: 1px solid white;
-            font-size: .85rem;
+
+            font-size: .82rem;
             text-transform: uppercase;
             letter-spacing: 1px;
+
             transition: .2s ease;
         }
 
@@ -178,57 +241,91 @@
         }
 
 
-        /* =========================================
-           SECTIONS
-        ========================================== */
+        /* =========================================================
+           GENERAL SECTIONS
+        ========================================================== */
 
         section {
             padding: 100px 0;
         }
 
         .section-label {
-            font-size: .75rem;
+            font-size: .73rem;
             text-transform: uppercase;
             letter-spacing: 2px;
+
             color: #777;
-            margin-bottom: .6rem;
+
+            margin-bottom: .75rem;
         }
 
         .section-title {
             font-size: clamp(2rem, 5vw, 3rem);
+
             margin-bottom: 1.5rem;
         }
 
         .section-intro {
             max-width: 800px;
+
             color: #555;
+
             margin-bottom: 3rem;
         }
 
 
-        /* =========================================
-           EXPERTISE
-        ========================================== */
+        /* =========================================================
+           WHAT I BRING
+        ========================================================== */
 
         #expertise {
             background: white;
         }
 
+        .fade-statement {
+            font-size: clamp(2.2rem, 5vw, 4rem);
+            line-height: 1.12;
+
+            max-width: 850px;
+
+            margin-bottom: 4rem;
+
+            opacity: 0;
+
+            animation: fadeUp 1s ease forwards;
+            animation-delay: .3s;
+        }
+
         .expertise-grid {
             display: grid;
+
             grid-template-columns: repeat(3, 1fr);
+
             gap: 1.5rem;
         }
 
         .expertise-card {
             border: 1px solid #ddd;
+
             padding: 2rem;
-            background: #fff;
+
+            background: white;
+
+            transition: transform .2s ease,
+                        box-shadow .2s ease;
+        }
+
+        .expertise-card:hover {
+            transform: translateY(-5px);
+
+            box-shadow:
+                0 12px 30px rgba(0, 0, 0, .07);
         }
 
         .expertise-card i {
-            font-size: 1.6rem;
-            margin-bottom: 1.2rem;
+            font-size: 1.5rem;
+
+            margin-bottom: 1.3rem;
         }
 
         .expertise-card h3 {
@@ -237,18 +334,24 @@
 
         .skill-list {
             list-style: none;
+
             color: #555;
         }
 
         .skill-list li {
-            padding: .4rem 0;
+            padding: .45rem 0;
+
             border-bottom: 1px solid #eee;
         }
 
+        .skill-list li:last-child {
+            border-bottom: none;
+        }
 
-        /* =========================================
+
+        /* =========================================================
            ABOUT
-        ========================================== */
+        ========================================================== */
 
         #about {
             background: #f2f2f2;
@@ -256,90 +359,200 @@
 
         .about-layout {
             display: grid;
-            grid-template-columns: .7fr 1.3fr;
-            gap: 4rem;
+
+            grid-template-columns: .8fr 1.2fr;
+
+            gap: 5rem;
+
             align-items: start;
+        }
+
+        .about-photo-wrap {
+            position: relative;
+        }
+
+        .about-photo {
+            width: 100%;
+            max-width: 380px;
+
+            aspect-ratio: 4 / 5;
+
+            object-fit: cover;
+
+            display: block;
+
+            background: #ddd;
+        }
+
+        .photo-placeholder {
+            width: 100%;
+            max-width: 380px;
+
+            aspect-ratio: 4 / 5;
+
+            background: #dedede;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            color: #777;
+
+            text-align: center;
+
+            padding: 2rem;
+        }
+
+        .photo-note {
+            display: flex;
+            align-items: center;
+
+            gap: .8rem;
+
+            margin-top: 1.2rem;
+
+            font-size: .9rem;
+            font-style: italic;
+
+            color: #666;
+
+            opacity: 0;
+
+            animation: slideIn 1s ease forwards;
+            animation-delay: 1s;
+        }
+
+        .photo-arrow {
+            font-size: 2rem;
+
+            transform: rotate(-20deg);
         }
 
         .about-big-text {
             font-size: 2rem;
             font-weight: 700;
+
             line-height: 1.25;
+
+            margin-bottom: 2rem;
         }
 
         .about-copy {
-            font-size: 1.05rem;
+            font-size: 1.04rem;
+
             color: #444;
         }
 
 
-        /* =========================================
+        /* =========================================================
            PROJECTS
-        ========================================== */
+        ========================================================== */
 
         #projects {
             background: white;
         }
 
+        .project-heading {
+            max-width: 900px;
+
+            font-size: clamp(2.2rem, 5vw, 3.8rem);
+
+            margin-bottom: 1rem;
+        }
+
+        .project-heading span {
+            color: #777;
+        }
+
         .projects-grid {
             display: grid;
+
             grid-template-columns: repeat(2, 1fr);
+
             gap: 1.5rem;
+
+            margin-top: 3rem;
         }
 
         .project-card {
             border: 1px solid #ddd;
+
             background: white;
+
             padding: 2rem;
+
             display: flex;
             flex-direction: column;
+
+            transition:
+                transform .2s ease,
+                box-shadow .2s ease;
         }
 
-        .project-number {
-            font-size: .75rem;
-            letter-spacing: 2px;
+        .project-card:hover {
+            transform: translateY(-4px);
+
+            box-shadow:
+                0 12px 30px rgba(0, 0, 0, .07);
+        }
+
+        .project-category {
+            font-size: .7rem;
+
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+
             color: #888;
-            margin-bottom: 1rem;
+
+            margin-bottom: .7rem;
         }
 
         .project-card h3 {
-            font-size: 1.4rem;
-            margin-bottom: 1rem;
+            font-size: 1.45rem;
+
+            margin-bottom: .4rem;
+        }
+
+        .project-subtitle {
+            font-size: .9rem;
+            font-style: italic;
+
+            color: #777;
+
+            margin-bottom: 1.4rem;
         }
 
         .project-card p {
             color: #555;
         }
 
-        .project-label {
-            font-weight: 700;
-            color: #222;
-        }
-
         .tags {
             display: flex;
-            gap: .5rem;
             flex-wrap: wrap;
+
+            gap: .5rem;
+
             margin-top: auto;
+
             padding-top: 1rem;
         }
 
         .tag {
             background: #f0f0f0;
+
             padding: .35rem .65rem;
-            font-size: .75rem;
+
             border-radius: 3px;
+
+            font-size: .73rem;
         }
-
-
-        /* =========================================
-           FEATURED PROJECT
-        ========================================== */
 
         .featured-project {
             grid-column: 1 / -1;
+
             background: #171717;
             color: white;
+
             border: none;
         }
 
@@ -347,15 +560,40 @@
             color: #ccc;
         }
 
+        .featured-project .project-category,
+        .featured-project .project-subtitle {
+            color: #aaa;
+        }
+
         .featured-project .tag {
             background: #333;
+
             color: white;
         }
 
+        .pending-label {
+            display: inline-block;
 
-        /* =========================================
+            width: fit-content;
+
+            padding: .3rem .6rem;
+
+            margin-bottom: 1rem;
+
+            border: 1px solid #aaa;
+            border-radius: 3px;
+
+            font-size: .68rem;
+            font-weight: bold;
+
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+
+        /* =========================================================
            EXPERIENCE
-        ========================================== */
+        ========================================================== */
 
         #experience {
             background: #f2f2f2;
@@ -363,10 +601,14 @@
 
         .experience-item {
             display: grid;
-            grid-template-columns: 250px 1fr;
+
+            grid-template-columns: 240px 1fr;
+
             gap: 3rem;
+
+            padding: 2.7rem 0;
+
             border-top: 1px solid #ccc;
-            padding: 2.5rem 0;
         }
 
         .experience-item:last-child {
@@ -377,23 +619,30 @@
             color: #666;
         }
 
+        .experience-meta strong {
+            color: #222;
+        }
+
         .experience-content h3 {
-            margin-bottom: .5rem;
+            margin-bottom: .4rem;
         }
 
         .experience-content h4 {
-            color: #666;
             font-weight: 400;
+
+            color: #666;
+
             margin-bottom: 1rem;
         }
 
 
-        /* =========================================
-           PERSONAL DATA PROJECT
-        ========================================== */
+        /* =========================================================
+           PERSONAL / MUSIC
+        ========================================================== */
 
         #personal {
             background: #151515;
+
             color: white;
         }
 
@@ -407,27 +656,37 @@
 
         .music-project {
             display: grid;
+
             grid-template-columns: 1fr 1fr;
-            gap: 3rem;
+
+            gap: 4rem;
+
             align-items: center;
         }
 
         .music-display {
             border: 1px solid #444;
+
             padding: 2rem;
+
             background: #1d1d1d;
         }
 
         .now-playing {
             text-transform: uppercase;
+
             letter-spacing: 2px;
+
             font-size: .7rem;
+
             color: #999;
-            margin-bottom: 2rem;
+
+            margin-bottom: 1.5rem;
         }
 
         .music-stat {
             padding: 1rem 0;
+
             border-bottom: 1px solid #333;
         }
 
@@ -437,18 +696,26 @@
 
         .music-stat strong {
             display: block;
-            font-size: 1.5rem;
+
+            font-size: 1.35rem;
         }
 
         .music-stat span {
             color: #aaa;
+
             font-size: .85rem;
         }
 
+        #personal .tag {
+            background: #333;
 
-        /* =========================================
+            color: white;
+        }
+
+
+        /* =========================================================
            EDUCATION
-        ========================================== */
+        ========================================================== */
 
         #education {
             background: white;
@@ -456,13 +723,17 @@
 
         .education-grid {
             display: grid;
+
             grid-template-columns: repeat(3, 1fr);
+
             gap: 1.5rem;
         }
 
         .education-card {
             padding: 2rem;
+
             border-top: 3px solid #222;
+
             background: #f7f7f7;
         }
 
@@ -475,26 +746,35 @@
         }
 
 
-        /* =========================================
+        /* =========================================================
            FOOTER
-        ========================================== */
+        ========================================================== */
 
         footer {
             background: #0e0e0e;
+
             color: #aaa;
+
             padding: 50px 0;
         }
 
         .footer-content {
             display: flex;
+
             justify-content: space-between;
             align-items: center;
+
             gap: 2rem;
         }
 
         .footer-links {
             display: flex;
+
             gap: 1.5rem;
+        }
+
+        .footer-links a {
+            transition: .2s ease;
         }
 
         .footer-links a:hover {
@@ -502,15 +782,17 @@
         }
 
 
-        /* =========================================
-           RESPONSIVE
-        ========================================== */
+        /* =========================================================
+           MOBILE
+        ========================================================== */
 
         @media (max-width: 850px) {
 
             .nav-container {
                 padding: 1rem 0;
+
                 align-items: flex-start;
+
                 flex-direction: column;
             }
 
@@ -522,28 +804,41 @@
                 grid-template-columns: 1fr;
             }
 
+            .featured-project {
+                grid-column: auto;
+            }
+
             .experience-item {
                 grid-template-columns: 1fr;
+
                 gap: 1rem;
             }
 
             .footer-content {
                 flex-direction: column;
+
                 align-items: flex-start;
+            }
+
+            .hero h1 {
+                letter-spacing: -2px;
             }
         }
 
     </style>
+
 </head>
 
 
 <body>
 
-<!-- =============================================
+
+<!-- =============================================================
      NAVIGATION
-============================================== -->
+============================================================== -->
 
 <nav>
+
     <div class="nav-container">
 
         <a href="#home" class="nav-name">
@@ -551,21 +846,42 @@
         </a>
 
         <ul class="nav-links">
-            <li><a href="#about">About</a></li>
-            <li><a href="#expertise">What I Bring</a></li>
-            <li><a href="#projects">Selected Work</a></li>
-            <li><a href="#experience">Experience</a></li>
-            <li><a href="#personal">Beyond Work</a></li>
-            <li><a href="#education">Education</a></li>
+
+            <li>
+                <a href="#about">About</a>
+            </li>
+
+            <li>
+                <a href="#expertise">What I Bring</a>
+            </li>
+
+            <li>
+                <a href="#projects">Selected Work</a>
+            </li>
+
+            <li>
+                <a href="#experience">Experience</a>
+            </li>
+
+            <li>
+                <a href="#personal">Beyond Work</a>
+            </li>
+
+            <li>
+                <a href="#education">Education</a>
+            </li>
+
         </ul>
 
     </div>
+
 </nav>
 
 
-<!-- =============================================
-     HERO
-============================================== -->
+
+<!-- =============================================================
+     HOME
+============================================================== -->
 
 <section class="hero" id="home">
 
@@ -577,41 +893,51 @@
                 Accounting • Process Improvement • Data • Technology
             </p>
 
-            <h1>Sidney Martinez</h1>
-
-            <h2>
-                Gas Accounting | Process Improvement | Data & Automation
-            </h2>
+            <h1>
+                Sidney Martinez
+            </h1>
 
             <div class="hero-description">
 
                 <p>
-                    I'm an energy-industry accountant focused on the
-                    intersection of accounting, process improvement, and tech!
-                    Here at Kinder, I work with complex AP processes while
-                    developing reporting, automation, and analytical solutions
-                    using SQL, Power Query, Excel, VBA, and other tools.
+                    I'm an accountant in the energy industry with a strong
+                    interest in process improvement and technology. Here at
+                    Kinder Morgan, I work with complex AP processes while
+                    developing reports, automations, and analytical tools using
+                    SQL, Power Query, Excel, VBA, HTML/CSS, and other tools.
                 </p>
 
                 <p>
-                    My interest in business processes comes from seeing
-                    firsthand how better data, systems, and automation can
-                    improve someone's day-to-day work. I'm passionate about
-                    identifying opportunities where an investment in automation
-                    or process refinement can create solutions that save time,
-                    improve data quality, and make daily work easier for others.
+                    My interest in business processes comes from working inside
+                    of them. I've seen firsthand how much of a difference better
+                    data, better systems, or even a small automation can make in
+                    someone's day-to-day work.
+                </p>
+
+                <p>
+                    I enjoy finding those opportunities and figuring out how we
+                    can make a process faster, more accurate, or simply easier
+                    for the people using it.
                 </p>
 
             </div>
 
             <div class="hero-buttons">
-                <a href="#projects" class="button primary">
-                    View My Work
+
+                <a href="#projects"
+                   class="button primary">
+
+                    See What I've Worked On
+
                 </a>
 
-                <a href="#about" class="button">
-                    About Me
+                <a href="#about"
+                   class="button">
+
+                    More About Me
+
                 </a>
+
             </div>
 
         </div>
@@ -621,86 +947,116 @@
 </section>
 
 
-<!-- =============================================
-     EXPERTISE
-============================================== -->
+
+<!-- =============================================================
+     WHAT I BRING
+============================================================== -->
 
 <section id="expertise">
 
     <div class="container">
 
-        <p class="section-label">What I Bring</p>
-
-        <h2 class="section-title">
-            Business knowledge meets technical problem solving.
-        </h2>
-
-        <p class="section-intro">
-            My experience combines accounting operations, business process
-            knowledge, data analysis, automation, and systems work.
+        <p class="section-label">
+            What I Bring
         </p>
+
+        <h2 class="fade-statement">
+            Where can I be useful?<br>
+            Usually, wherever there's a problem to solve.
+        </h2>
 
 
         <div class="expertise-grid">
 
-            <!-- Accounting -->
+
+            <!-- ACCOUNTING -->
 
             <div class="expertise-card">
 
                 <i class="fa-solid fa-chart-line"></i>
 
-                <h3>Gas & Financial Accounting</h3>
+                <h3>
+                    Accounting & Energy
+                </h3>
 
                 <ul class="skill-list">
-                    <li>Midstream Energy Industry</li>
+
+                    <li>Midstream Energy</li>
+
                     <li>Gas Volume Accounting</li>
+
                     <li>Accounts Payable</li>
+
                     <li>Vendor & Payment Operations</li>
+
                     <li>Financial Controls</li>
-                    <li>Account Reconciliation</li>
-                    <li>Exception Investigation</li>
+
+                    <li>Reconciliations</li>
+
+                    <li>Exception Research</li>
+
                 </ul>
 
             </div>
 
 
-            <!-- Technology -->
+            <!-- TECHNOLOGY -->
 
             <div class="expertise-card">
 
                 <i class="fa-solid fa-code"></i>
 
-                <h3>Technology & Data</h3>
+                <h3>
+                    Data & Technology
+                </h3>
 
                 <ul class="skill-list">
+
                     <li>SQL</li>
+
                     <li>Power Query</li>
-                    <li>Excel</li>
+
+                    <li>Advanced Excel</li>
+
                     <li>VBA & Macros</li>
+
                     <li>Power BI</li>
-                    <li>HTML</li>
-                    <li>CSS</li>
+
+                    <li>HTML & CSS</li>
+
+                    <li>SharePoint</li>
+
                 </ul>
 
             </div>
 
 
-            <!-- Process -->
+            <!-- PROCESS -->
 
             <div class="expertise-card">
 
                 <i class="fa-solid fa-gears"></i>
 
-                <h3>Process & Systems</h3>
+                <h3>
+                    Process & Systems
+                </h3>
 
                 <ul class="skill-list">
+
                     <li>Process Automation</li>
+
                     <li>SOX Controls</li>
+
                     <li>Audit Support</li>
+
                     <li>Reporting & Data Analytics</li>
+
                     <li>System Integrations</li>
+
                     <li>Project Management</li>
-                    <li>Systems Administration</li>
+
+                    <li>System Administration & Support</li>
+
                 </ul>
 
             </div>
@@ -712,51 +1068,136 @@
 </section>
 
 
-<!-- =============================================
-     ABOUT
-============================================== -->
+
+<!-- =============================================================
+     ABOUT ME
+============================================================== -->
 
 <section id="about">
 
     <div class="container">
 
-        <p class="section-label">About Me</p>
+        <p class="section-label">
+            About Me
+        </p>
+
 
         <div class="about-layout">
 
-            <div>
+
+            <!-- PHOTO -->
+
+            <div class="about-photo-wrap">
+
+                <!--
+                    WHEN YOU HAVE YOUR PHOTO:
+
+                    1. Upload it to your GitHub repository.
+                    2. Put it inside an images folder.
+                    3. Delete the placeholder below.
+                    4. Replace it with:
+
+                    <img
+                        src="images/sidney.jpg"
+                        alt="Sidney Martinez"
+                        class="about-photo">
+                -->
+
+                <div class="photo-placeholder">
+
+                    Your photo goes here.
+
+                    <br><br>
+
+                    images/sidney.jpg
+
+                </div>
+
+
+                <div class="photo-note">
+
+                    <span class="photo-arrow">
+                        ↖
+                    </span>
+
+                    <span>
+                        probably thinking about budgets
+                        and SOX controls
+                    </span>
+
+                </div>
+
+            </div>
+
+
+            <!-- ABOUT TEXT -->
+
+            <div class="about-copy">
+
                 <p class="about-big-text">
                     At my core,<br>
                     I'm an accountant.
                 </p>
-            </div>
 
-            <div class="about-copy">
 
                 <p>
-                    I hold a BBA in Accounting and Finance and began my career
-                    as a Gas Volume Accountant, where I developed a strong
-                    foundation in the midstream energy industry.
+                    I hold a BBA in Accounting with a minor in Finance,
+                    and I started my accounting career as a Gas Volume
+                    Accountant at Enterprise Products. That's where I
+                    built my foundation in the midstream energy industry
+                    and learned how closely operations, systems, data,
+                    and accounting all work together.
                 </p>
 
-                <p>
-                    Before that, I worked in a variety of corporate roles while
-                    putting myself through college, including administrative,
-                    customer service, bookkeeping, and office management
-                    positions. Those experiences gave me a broad perspective
-                    on how organizations operate and sparked my interest in
-                    process improvement.
-                </p>
 
                 <p>
-                    Over time, I moved from simply performing processes to
-                    questioning, analyzing, and improving them.
+                    In Gas Accounting, I worked across areas including
+                    Contract Administration, Commercial, Liquids Volume
+                    Control, NGLs, and LNG. That experience gave me exposure
+                    to the operational side of the energy industry before
+                    I eventually moved into Accounts Payable.
                 </p>
 
+
                 <p>
-                    Today, I'm pursuing an MBA with concentrations in Process
-                    Improvement and Project Management, expanding my technical
-                    skills, and preparing for the CPA exam.
+                    My path here wasn't completely traditional. While
+                    putting myself through college, I worked in several
+                    different corporate roles, including administrative
+                    work, customer service, bookkeeping, and office
+                    management.
+                </p>
+
+
+                <p>
+                    Working in different parts of a business gave me an
+                    early appreciation for how processes affect the people
+                    actually doing the work.
+                </p>
+
+
+                <p>
+                    Somewhere along the way, I became the person who
+                    couldn't just follow a process without asking why
+                    we were doing it that way. I started building reports,
+                    automating things I was tired of doing manually,
+                    digging into data when something didn't look right,
+                    and looking for ways to make our processes work a
+                    little better.
+                </p>
+
+
+                <p>
+                    Today, I'm pursuing my MBA with concentrations in
+                    Process Improvement and Project Management, continuing
+                    to build my technical skills, and preparing for the
+                    CPA exam.
+                </p>
+
+
+                <p>
+                    I'm especially interested in work that lets me combine
+                    those areas instead of choosing between accounting,
+                    technology, and process improvement.
                 </p>
 
             </div>
@@ -768,197 +1209,407 @@
 </section>
 
 
-<!-- =============================================
-     PROJECTS
-============================================== -->
+
+<!-- =============================================================
+     SELECTED WORK
+============================================================== -->
 
 <section id="projects">
 
     <div class="container">
 
-        <p class="section-label">Selected Work</p>
+        <p class="section-label">
+            Selected Work
+        </p>
 
-        <h2 class="section-title">
-            Projects built around real business problems.
+
+        <h2 class="project-heading">
+            Kinder Morgan built up my skills.
+            <span>
+                I've used them to build for Kinder Morgan.
+            </span>
         </h2>
 
+
         <p class="section-intro">
-            A selection of accounting, analytics, automation, process
-            improvement, and systems projects I've worked on at Kinder Morgan.
+            These are some of the projects that started with me noticing
+            something that could work better and deciding to see what I
+            could do about it.
         </p>
 
 
         <div class="projects-grid">
 
 
-            <!-- Project 1 -->
+            <!-- =================================================
+                 DUPLICATE PAYMENT DETECTION
+            ================================================== -->
 
             <article class="project-card">
 
-                <p class="project-number">01 / PAYMENT CONTROLS</p>
+                <p class="project-category">
+                    Payment Controls
+                </p>
 
                 <h3>
                     Duplicate Payment Detection & Recovery
                 </h3>
 
-                <p>
-                    <span class="project-label">Business Problem:</span>
-                    Duplicate payments create financial exposure and require
-                    timely identification before funds leave the organization.
+                <p class="project-subtitle">
+                    My earliest project — done with nothing fancy.
                 </p>
 
+
                 <p>
-                    <span class="project-label">Solution:</span>
-                    Developed reporting and analytical tools to identify
-                    potential duplicate payments, support review, and improve
-                    recovery and prevention efforts.
+                    This was one of the first projects where I realized
+                    I could use the tools I already had to solve a much
+                    bigger problem.
                 </p>
+
+
+                <p>
+                    At the time, we were paying for third-party software
+                    to detect potential duplicate payments. The results
+                    were only available for review once a week, required
+                    significant adjustment before the data was practical
+                    to work with, and didn't give us the flexibility I
+                    wanted for day-to-day review.
+                </p>
+
+
+                <p>
+                    I took the useful detection metrics from that process,
+                    added criteria tailored specifically to Kinder Morgan,
+                    and recreated the functionality internally.
+                </p>
+
+
+                <p>
+                    No fancy development environment. Just Excel,
+                    Power Query, macros, VBA, and some admittedly
+                    ridiculous Excel formulas.
+                </p>
+
 
                 <div class="tags">
-                    <span class="tag">SQL</span>
-                    <span class="tag">Power Query</span>
+
                     <span class="tag">Excel</span>
+
+                    <span class="tag">Power Query</span>
+
                     <span class="tag">VBA</span>
-                    <span class="tag">Controls</span>
+
+                    <span class="tag">Macros</span>
+
+                    <span class="tag">Payment Controls</span>
+
                 </div>
 
             </article>
 
 
-            <!-- Project 2 -->
+
+            <!-- =================================================
+                 MISKEY REPORT
+            ================================================== -->
 
             <article class="project-card">
 
-                <p class="project-number">02 / RISK ANALYTICS</p>
+                <p class="project-category">
+                    Risk & Analytics
+                </p>
 
                 <h3>
                     Miskey Invoice Risk Reporting
                 </h3>
 
-                <p>
-                    <span class="project-label">Business Problem:</span>
-                    Invoice-entry inconsistencies and unusual activity can
-                    increase payment risk and require additional manual review.
+                <p class="project-subtitle">
+                    Data analytics at its finest.
                 </p>
 
+
                 <p>
-                    <span class="project-label">Solution:</span>
-                    Built analytical reporting to identify outliers, assess
-                    vendor-level risk, and prioritize exceptions for review.
+                    Miskeys are one of the leading causes of the duplicate
+                    payments I see, but duplicate payments aren't the only
+                    risk. A small invoice-entry error can create payment
+                    problems, complicate vendor accounts, and cause issues
+                    much further down the road.
                 </p>
+
+
+                <p>
+                    I wanted a way to find those errors without already
+                    knowing what I was looking for.
+                </p>
+
+
+                <p>
+                    I developed reporting that analyzes invoice activity
+                    for unusual patterns and potential miskeys. That
+                    included building measures such as outlier ratios,
+                    severity scoring, and other analytical metrics designed
+                    to identify records that behave differently from the
+                    surrounding data.
+                </p>
+
+
+                <p>
+                    The reporting has helped identify invoices requiring
+                    review and has contributed to the successful
+                    cancellation and correction of more than
+                    <strong>$1 million in invoices.</strong>
+                </p>
+
 
                 <div class="tags">
+
                     <span class="tag">SQL</span>
+
                     <span class="tag">Power Query</span>
+
+                    <span class="tag">Excel</span>
+
                     <span class="tag">VBA</span>
-                    <span class="tag">Risk Analysis</span>
-                    <span class="tag">Exception Reporting</span>
+
+                    <span class="tag">Outlier Analysis</span>
+
+                    <span class="tag">Risk Scoring</span>
+
                 </div>
 
             </article>
 
 
-            <!-- Project 3 -->
+
+            <!-- =================================================
+                 AP WEBSITE
+            ================================================== -->
 
             <article class="project-card">
 
-                <p class="project-number">03 / PROCESS IMPROVEMENT</p>
+                <p class="project-category">
+                    Process Improvement & Web Design
+                </p>
+
+                <span class="pending-label">
+                    Pending — Website Still in Demo Stage
+                </span>
+
 
                 <h3>
                     AP Knowledge & Self-Service Website
                 </h3>
 
-                <p>
-                    <span class="project-label">Business Problem:</span>
-                    Employees navigating Accounts Payable processes need clear
-                    guidance, troubleshooting resources, and the correct
-                    escalation path.
-                </p>
 
                 <p>
-                    <span class="project-label">Solution:</span>
-                    Designed and developed an internal AP knowledge experience
-                    that combines guided troubleshooting, process information,
-                    FAQs, contact routing, and self-service resources.
+                    A lot of questions that come to AP aren't necessarily
+                    difficult questions. People just don't always know
+                    where to find the answer, what happens next, or who
+                    they actually need to contact.
                 </p>
+
+
+                <p>
+                    I've been building an internal AP resource designed
+                    around the person using it rather than around how
+                    we're organized behind the scenes.
+                </p>
+
+
+                <p>
+                    The site includes guided troubleshooting, process
+                    information, FAQs, contact routing, and self-service
+                    resources intended to help employees get to the right
+                    answer faster.
+                </p>
+
+
+                <p>
+                    I've also used Microsoft Lists, Forms, and Power
+                    Automate to turn common AP requests into trackable
+                    workflows that function more like Jira tickets —
+                    giving requests a defined path instead of relying
+                    entirely on emails moving between inboxes.
+                </p>
+
+
+                <p>
+                    This project has also given me an excuse to keep
+                    teaching myself HTML and CSS, which has been one
+                    of my favorite parts.
+                </p>
+
 
                 <div class="tags">
+
                     <span class="tag">HTML</span>
+
                     <span class="tag">CSS</span>
+
                     <span class="tag">SharePoint</span>
-                    <span class="tag">UX</span>
+
+                    <span class="tag">Microsoft Lists</span>
+
+                    <span class="tag">Power Automate</span>
+
                     <span class="tag">Process Design</span>
+
                 </div>
 
             </article>
 
 
-            <!-- Project 4 -->
+
+            <!-- =================================================
+                 PCARD DUPLICATE ANALYSIS
+            ================================================== -->
 
             <article class="project-card">
 
-                <p class="project-number">04 / SPEND ANALYTICS</p>
+                <p class="project-category">
+                    Controls & Data Analysis
+                </p>
 
                 <h3>
-                    PCard Vendor Analysis
+                    PCard Duplicate Analysis
                 </h3>
 
-                <p>
-                    <span class="project-label">Business Problem:</span>
-                    High-spend PCard activity presents opportunities to identify
-                    vendors that may be better suited for alternative payment
-                    methods.
+                <p class="project-subtitle">
+                    Creating visibility where we didn't have it before.
                 </p>
 
+
                 <p>
-                    <span class="project-label">Solution:</span>
-                    Analyzed vendor spend and transaction activity while
-                    distinguishing traditional point-of-sale activity from
-                    vendors with potential for AP payment conversion.
+                    PCard activity creates a unique duplicate-payment
+                    challenge. The PCard system behaves much more like a
+                    bank statement, while AP contains the invoice and
+                    payment activity we would normally use for duplicate
+                    review.
                 </p>
+
+
+                <p>
+                    During the latest audit, I identified that PCard
+                    transactions represented a significant source of
+                    duplicate-payment risk that previous review methods
+                    had not fully captured.
+                </p>
+
+
+                <p>
+                    The problem was that the two sets of data weren't
+                    designed to match each other. Vendor names can be
+                    formatted differently between systems, so an exact
+                    match isn't enough.
+                </p>
+
+
+                <p>
+                    I began developing a process to compare PCard and AP
+                    payment activity using fuzzy matching and approximate
+                    vendor-name matching, along with other transaction
+                    criteria.
+                </p>
+
+
+                <p>
+                    The result has given us visibility into an area where
+                    we previously had very little ability to systematically
+                    compare the two payment streams.
+                </p>
+
 
                 <div class="tags">
+
+                    <span class="tag">Data Analytics</span>
+
+                    <span class="tag">Fuzzy Matching</span>
+
                     <span class="tag">Excel</span>
-                    <span class="tag">Data Analysis</span>
-                    <span class="tag">Vendor Analysis</span>
-                    <span class="tag">Reporting</span>
+
+                    <span class="tag">Audit</span>
+
+                    <span class="tag">Payment Controls</span>
+
                 </div>
 
             </article>
 
 
-            <!-- Project 5 -->
+
+            <!-- =================================================
+                 SYSTEM IMPLEMENTATION
+            ================================================== -->
 
             <article class="project-card featured-project">
 
-                <p class="project-number">
-                    05 / SYSTEM IMPLEMENTATION & PROJECT MANAGEMENT
+                <p class="project-category">
+                    Systems • Implementation • Project Management
                 </p>
+
 
                 <h3>
-                    Finance Systems Implementation & Integration
+                    Systems Implementation & Process Design
                 </h3>
 
-                <p>
-                    Served a key role in the project management, implementation,
-                    testing, issue identification, and continued improvement of
-                    financial systems and tools supporting Accounting & Finance.
+
+                <p class="project-subtitle">
+                    Somewhere between the business process and the technology
+                    is usually where you'll find me.
                 </p>
 
+
                 <p>
-                    My involvement has included translating operational needs,
-                    identifying system and process issues, supporting testing,
-                    communicating requirements, and helping connect business
-                    processes with technical solutions.
+                    I've had the opportunity to serve a key role in the
+                    implementation, testing, troubleshooting, and continued
+                    improvement of several Accounting & Finance systems,
+                    including Ariba, ERP Lite, and Kinder Morgan's Discount
+                    Management software.
                 </p>
+
+
+                <p>
+                    My role tends to sit between the process and the
+                    technology. I help identify what users need, test
+                    whether the system actually works that way, document
+                    issues, communicate requirements, and work through
+                    how changes will affect the accounting process on
+                    the other side.
+                </p>
+
+
+                <p>
+                    I've supported user acceptance testing, issue tracking,
+                    process design, system integrations, implementation
+                    decisions, documentation, and communication between
+                    technical and business teams.
+                </p>
+
+
+                <p>
+                    This is the work that really pushed my interest toward
+                    business process analysis. I enjoy being the person
+                    who understands enough about both sides to help
+                    translate between them.
+                </p>
+
 
                 <div class="tags">
+
                     <span class="tag">Ariba</span>
+
                     <span class="tag">ERP Lite</span>
-                    <span class="tag">KM Discount Management</span>
+
+                    <span class="tag">Discount Management</span>
+
                     <span class="tag">UAT</span>
+
+                    <span class="tag">Requirements</span>
+
                     <span class="tag">Project Management</span>
+
                     <span class="tag">System Integration</span>
+
                 </div>
 
             </article>
@@ -970,47 +1621,75 @@
 </section>
 
 
-<!-- =============================================
+
+<!-- =============================================================
      EXPERIENCE
-============================================== -->
+============================================================== -->
 
 <section id="experience">
 
     <div class="container">
 
-        <p class="section-label">Experience</p>
+        <p class="section-label">
+            Experience
+        </p>
 
         <h2 class="section-title">
-            Accounting experience with a process mindset.
+            I've spent my career learning how the pieces connect.
         </h2>
 
+
+        <!-- KINDER MORGAN -->
 
         <div class="experience-item">
 
             <div class="experience-meta">
-                <strong>Kinder Morgan</strong>
-                <p>Houston, Texas</p>
+
+                <strong>
+                    Kinder Morgan
+                </strong>
+
+                <p>
+                    Houston, Texas
+                </p>
+
             </div>
+
 
             <div class="experience-content">
 
-                <h3>Accountant II</h3>
+                <h3>
+                    Accountant II
+                </h3>
 
-                <h4>Accounts Payable / Special Operations</h4>
+                <h4>
+                    Accounts Payable / Special Operations
+                </h4>
+
 
                 <p>
-                    Support complex Accounts Payable operations while serving
-                    as a technical and process resource for reporting,
-                    automation, financial controls, vendor issues, systems,
-                    and process improvement initiatives.
+                    My current role sits within Accounts Payable, but my
+                    day-to-day work reaches into controls, reporting,
+                    systems, vendor issues, data analysis, automation,
+                    and process improvement.
                 </p>
 
+
                 <p>
-                    My work includes duplicate payment prevention and recovery,
-                    open credit resolution, reporting, vendor outreach,
-                    financial systems support, data analysis, system
-                    integrations, and development of technical solutions using
-                    SQL, Power Query, Excel, VBA, and web technologies.
+                    I manage and support work including duplicate-payment
+                    prevention and recovery, open-credit resolution,
+                    complex vendor issues, reporting, vendor outreach,
+                    financial-system support, system integrations, and
+                    technical solutions built with SQL, Power Query,
+                    Excel, VBA, and web technologies.
+                </p>
+
+
+                <p>
+                    I've also become a technical resource for problems
+                    that don't always fit neatly into one person's job
+                    description — which is usually the kind of work I
+                    enjoy most.
                 </p>
 
             </div>
@@ -1018,24 +1697,56 @@
         </div>
 
 
+
+        <!-- ENTERPRISE PRODUCTS -->
+
         <div class="experience-item">
 
             <div class="experience-meta">
-                <strong>Energy Industry</strong>
-                <p>Accounting</p>
+
+                <strong>
+                    Enterprise Products
+                </strong>
+
+                <p>
+                    Midstream Energy
+                </p>
+
             </div>
+
 
             <div class="experience-content">
 
-                <h3>Gas Volume Accountant</h3>
+                <h3>
+                    Gas Volume Accountant
+                </h3>
 
-                <h4>Midstream Accounting</h4>
+                <h4>
+                    Gas Accounting
+                </h4>
+
 
                 <p>
-                    Began my accounting career in gas volume accounting,
-                    developing foundational knowledge of midstream operations,
-                    accounting processes, reconciliations, data integrity, and
-                    the relationship between operational and financial data.
+                    I started my accounting career in Gas Volume Accounting
+                    at Enterprise Products, where I developed my foundation
+                    in midstream energy and learned how operational data
+                    eventually becomes accounting data.
+                </p>
+
+
+                <p>
+                    My work involved collaboration across areas including
+                    Contract Administration, Commercial, Liquids Volume
+                    Control, NGLs, and LNG, giving me exposure to both the
+                    accounting and operational sides of the business.
+                </p>
+
+
+                <p>
+                    That experience is still a major part of how I approach
+                    problems today: understanding where the data came from
+                    and what happened upstream before trying to fix what
+                    appears downstream.
                 </p>
 
             </div>
@@ -1047,73 +1758,137 @@
 </section>
 
 
-<!-- =============================================
-     PERSONAL PROJECT
-============================================== -->
+
+<!-- =============================================================
+     MUSIC / PERSONAL PROJECT
+============================================================== -->
 
 <section id="personal">
 
     <div class="container">
 
-        <p class="section-label">Beyond the Spreadsheet</p>
+        <p class="section-label">
+            Beyond the Spreadsheet :P
+        </p>
+
 
         <h2 class="section-title">
-            Apparently I analyze data for fun, too.
+            I analyze for fun too!
         </h2>
+
 
         <div class="music-project">
 
+
             <div>
 
-                <h3>Personal Music Analytics</h3>
+                <h3>
+                    My Listening Data
+                </h3>
+
 
                 <p class="section-intro">
-                    Outside of work, I track and analyze statistics about the
-                    music I listen to. It's a personal project that combines
-                    something I enjoy with my interest in data, trends, and
-                    visualization.
+
+                    One of my personal projects is tracking the music
+                    I listen to.
+
+                    I use my listening history to find new artists and
+                    genres, explore my listening tastes, and see how my
+                    habits change over time.
+
+                    You'll never see me without my headphones.
+
                 </p>
+
 
                 <p>
-                    I use listening-history data to explore patterns such as
-                    top artists, songs, albums, genres, listening frequency,
-                    and how my listening habits change over time.
+                    There isn't really a business problem to solve here.
+                    I just like music, I like data, and combining the two
+                    is what I consider fun.
                 </p>
 
+
                 <div class="tags">
-                    <span class="tag">Data Analytics</span>
-                    <span class="tag">Excel</span>
-                    <span class="tag">Visualization</span>
-                    <span class="tag">Music</span>
+
+                    <span class="tag">
+                        Data Analytics
+                    </span>
+
+                    <span class="tag">
+                        Excel
+                    </span>
+
+                    <span class="tag">
+                        Visualization
+                    </span>
+
+                    <span class="tag">
+                        Music
+                    </span>
+
                 </div>
 
             </div>
 
 
+
             <div class="music-display">
 
                 <p class="now-playing">
-                    Personal Data Project
+                    Currently Analyzing
                 </p>
 
-                <div class="music-stat">
-                    <strong>Top Artists</strong>
-                    <span>Who makes it into the rotation most often?</span>
-                </div>
 
                 <div class="music-stat">
-                    <strong>Listening Trends</strong>
-                    <span>How my listening changes over time</span>
+
+                    <strong>
+                        Artists
+                    </strong>
+
+                    <span>
+                        Who am I actually listening to the most?
+                    </span>
+
                 </div>
 
-                <div class="music-stat">
-                    <strong>Albums & Genres</strong>
-                    <span>Breaking listening history into categories</span>
-                </div>
 
                 <div class="music-stat">
-                    <strong>Data Visualization</strong>
-                    <span>Turning listening history into something visual</span>
+
+                    <strong>
+                        Albums
+                    </strong>
+
+                    <span>
+                        Favorites according to the data
+                    </span>
+
+                </div>
+
+
+                <div class="music-stat">
+
+                    <strong>
+                        Listening Trends
+                    </strong>
+
+                    <span>
+                        Days, months, genres, and questionable phases
+                    </span>
+
+                </div>
+
+
+                <div class="music-stat">
+
+                    <strong>
+                        Discovery
+                    </strong>
+
+                    <span>
+                        Using my own history to figure out what I should
+                        listen to next
+                    </span>
+
                 </div>
 
             </div>
@@ -1125,62 +1900,82 @@
 </section>
 
 
-<!-- =============================================
+
+<!-- =============================================================
      EDUCATION
-============================================== -->
+============================================================== -->
 
 <section id="education">
 
     <div class="container">
 
-        <p class="section-label">Education & Development</p>
+        <p class="section-label">
+            Education & Development
+        </p>
+
 
         <h2 class="section-title">
-            Always learning.
+            Still learning.
         </h2>
 
 
         <div class="education-grid">
 
+
             <div class="education-card">
 
-                <h3>University of Houston–Downtown</h3>
+                <h3>
+                    University of Houston–Downtown
+                </h3>
 
                 <p>
-                    <strong>Master of Business Administration</strong>
+                    <strong>
+                        Master of Business Administration
+                    </strong>
                 </p>
 
                 <p>
                     Process Improvement & Project Management
                 </p>
 
-                <p>Expected 2027</p>
-
-            </div>
-
-
-            <div class="education-card">
-
-                <h3>Sam Houston State University</h3>
-
                 <p>
-                    <strong>BBA — Accounting</strong>
-                </p>
-
-                <p>
-                    Finance Minor
+                    Expected 2027
                 </p>
 
             </div>
 
 
+
             <div class="education-card">
 
-                <h3>CPA Candidate</h3>
+                <h3>
+                    Sam Houston State University
+                </h3>
 
                 <p>
-                    Continuing professional development in accounting,
-                    controls, audit, technology, and financial processes.
+                    <strong>
+                        BBA — Accounting
+                    </strong>
+                </p>
+
+                <p>
+                    Minor in Finance
+                </p>
+
+            </div>
+
+
+
+            <div class="education-card">
+
+                <h3>
+                    CPA Candidate
+                </h3>
+
+                <p>
+                    Continuing to build my knowledge in accounting,
+                    audit, controls, technology, and financial processes
+                    while preparing for the CPA exam.
                 </p>
 
             </div>
@@ -1192,36 +1987,62 @@
 </section>
 
 
-<!-- =============================================
+
+<!-- =============================================================
      FOOTER
-============================================== -->
+============================================================== -->
 
 <footer>
 
     <div class="container footer-content">
 
+
         <div>
-            <strong>Sidney Martinez</strong>
-            <p>Accounting • Process Improvement • Data • Technology</p>
+
+            <strong>
+                Sidney Martinez
+            </strong>
+
+            <p>
+                Accounting • Process Improvement • Data • Technology
+            </p>
+
         </div>
+
 
         <div class="footer-links">
 
-            <!-- Replace # with your actual links -->
+            <!--
+                Replace # with your actual links later.
+            -->
 
-            <a href="#" aria-label="GitHub">
+            <a href="#"
+               aria-label="GitHub">
+
                 <i class="fa-brands fa-github"></i>
+
                 GitHub
+
             </a>
 
-            <a href="#" aria-label="LinkedIn">
+
+            <a href="#"
+               aria-label="LinkedIn">
+
                 <i class="fa-brands fa-linkedin"></i>
+
                 LinkedIn
+
             </a>
 
-            <a href="#" aria-label="Resume">
+
+            <a href="#"
+               aria-label="Resume">
+
                 <i class="fa-solid fa-file"></i>
+
                 Resume
+
             </a>
 
         </div>
@@ -1229,6 +2050,7 @@
     </div>
 
 </footer>
+
 
 </body>
 </html>
