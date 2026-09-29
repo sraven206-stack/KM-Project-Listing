@@ -776,6 +776,15 @@
         }
 
 
+
+        .project-image-caption {
+            margin: .65rem 0 0;
+            font-size: .76rem;
+            color: #777;
+            font-style: italic;
+            line-height: 1.4;
+        }
+
         .project-image-link {
             display: block;
             line-height: 0;
@@ -2182,45 +2191,15 @@
                 </p>
 
                 <p>
-
-                    We were paying for third-party software to detect
-
-                    potential duplicate payments. The results were only
-
-                    available for review once a week, and the data needed
-
-                    quite a bit of work before it was practical to use.
-
+                    We were paying for third-party software to identify potential duplicate payments, but we only got the results once a week, and the data still needed quite a bit of work before it was actually useful.
                 </p>
 
                 <p>
-
-                    I took the detection metrics that were useful, added
-
-                    criteria tailored specifically to Kinder Morgan,
-
-                    and recreated the process internally.
-
+                    I took the parts of that process that worked, added criteria specific to the duplicate issues I was actually seeing, and rebuilt it internally using Excel, Power Query, VBA, and macros. It gave us something faster, more flexible, and much easier to adjust as our needs changed.
                 </p>
 
                 <p>
-
-                    I did this with very little in retrospect! Just Excel,
-
-                    Power Query, macros, VBA, and some
-
-                    ridiculous Excel formulas.
-
-                </p>
-
-                <p>
-
-                    What started as one of my earliest attempts at
-
-                    automation became a tool we could shape around
-
-                    the way our team actually works.
-
+                    In 2025, the process helped us identify, prevent, and recover approximately <strong>$1.3 million in duplicate payments.</strong>
                 </p>
 
                 <div class="tags">
@@ -2262,53 +2241,15 @@
                 </p>
 
                 <p>
-
-                    Our payment system is particular about credits. A credit won't
-
-                    automatically apply against invoices unless several
-
-                    pieces of information line up exactly the way the
-
-                    system expects, and that is difficult to detect amound all of AP's moving parts.
-
+                    Our payment system is very particular about credits. A perfectly valid credit can sit on an account even when we have invoices to use it against, simply because one piece of information doesn't line up the way the system expects.
                 </p>
 
                 <p>
-
-                    That creates an interesting problem - we can have a
-
-                    perfectly valid credit available to us, but one small
-
-                    difference somewhere in the process can keep it from
-
-                    actually being used.
-
+                    I built an analysis that finds those credits, shows me why they aren't moving through the normal payment process, and gives me a much better place to start when figuring out what needs to be fixed.
                 </p>
 
                 <p>
-
-                    I built an analysis process that helps me identify
-
-                    credits that are available to take but aren't moving
-
-                    through the normal payment process. From there, I can
-
-                    determine what doesn't align and where the process
-
-                    has broken down.
-
-                </p>
-
-                <p>
-
-                    Instead of waiting for the stars to align,
-
-                    the report gives me a place to start: here's the
-
-                    credit, here's why it isn't being used, and here's
-
-                    what needs attention so we can recoup our funds.
-
+                    Instead of waiting for the stars to align, I can see what's sitting out there, why we aren't taking it, and what needs attention so we can get the money back.
                 </p>
 
                 <div class="project-image-wrap">
@@ -2320,6 +2261,7 @@
                         loading="lazy"
                     >
                 </a>
+                    <p class="project-image-caption">Open Credit Analysis — identifying credits requiring intervention and recovery.</p>
                 </div>
 
                 <div class="tags">
@@ -2361,51 +2303,15 @@
                 </p>
 
                 <p>
-
-                    Miskeys are one of the leading causes of the duplicate
-
-                    payments I see, but duplicates aren't the only risk.
-
-                    A small invoice-entry error can create payment issues,
-
-                    complicate vendor accounts, and cause problems much
-
-                    further down the road.
-
+                    Miskeys are one of the biggest causes of duplicate payments I see, but they can also create plenty of other problems. The hard part is finding the risky ones when you don't already know what you're looking for.
                 </p>
 
                 <p>
-
-                    I wanted to find those errors without already knowing
-
-                    exactly what I was looking for.
-
+                    I built reporting that looks for invoice activity that behaves differently from the surrounding data. I use things like outlier ratios, severity scoring, and other measures to narrow thousands of records down to the ones that actually deserve a closer look.
                 </p>
 
                 <p>
-
-                    I developed reporting that analyzes invoice activity
-
-                    for unusual patterns and potential miskeys. That
-
-                    included creating metrics such as outlier ratios,
-
-                    severity scoring, and other analytical measures to
-
-                    identify records that behave differently from the
-
-                    surrounding data.
-
-                </p>
-
-                <p>
-
-                    The analysis has contributed to the successful
-
-                    cancellation and correction of more than
-
-                    <strong>$1 million worth of invoices.</strong>
-
+                    In Q2 and Q3 2026 alone, that analysis helped us catch and correct <strong>nearly $500,000 in invoice activity.</strong>
                 </p>
 
                 <div class="project-image-wrap">
@@ -2417,6 +2323,7 @@
                         loading="lazy"
                     >
                 </a>
+                    <p class="project-image-caption">Miskey Risk Report — exception analysis used to identify high-risk invoice activity.</p>
                 </div>
 
                 <div class="tags">
@@ -2466,61 +2373,15 @@
                 </p>
 
                 <p>
-
-                    A lot of questions that come to AP aren't necessarily
-
-                    difficult questions. People just don't always know
-
-                    where to find the answer, what happens next, or who
-
-                    they actually need to contact.
-
+                    A lot of the questions that come to AP aren't actually difficult. People just don't always know where to find the answer, what they're supposed to do next, or who they need to contact.
                 </p>
 
                 <p>
-
-                    I've been building an internal AP resource designed
-
-                    around the person using it rather than around how
-
-                    we're organized behind the scenes.
-
+                    I started building an internal AP site around that problem. Instead of organizing it around how AP is structured behind the scenes, I designed it around what the person using it is actually trying to accomplish.
                 </p>
 
                 <p>
-
-                    The site includes guided troubleshooting, process
-
-                    information, FAQs, contact routing, and self-service
-
-                    resources intended to help employees get to the right
-
-                    answer faster.
-
-                </p>
-
-                <p>
-
-                    I've also used Microsoft Lists, Forms, and Power
-
-                    Automate to turn common AP requests into trackable
-
-                    workflows that function more like Jira tickets.
-
-                    Requests can have a defined owner, status, and path to
-
-                    completion.
-
-                </p>
-
-                <p>
-
-                    This project has also given me an excuse to keep
-
-                    teaching myself HTML and CSS, which has been one
-
-                    of my favorite parts. (I built this with HTML and CSS!)
-
+                    It includes guided troubleshooting, FAQs, process information, contact routing, and self-service tools. I've also used Microsoft Lists, Forms, and Power Automate to turn common requests into trackable workflows — and used the project as an excuse to keep teaching myself HTML and CSS.
                 </p>
 
                 <div class="project-image-wrap">
@@ -2532,6 +2393,7 @@
                         loading="lazy"
                     >
                 </a>
+                    <p class="project-image-caption">AP Knowledge & Self-Service Website — guided support and employee self-service design.</p>
                 </div>
 
                 <div class="tags">
@@ -2575,61 +2437,15 @@
                 </p>
 
                 <p>
-
-                    PCard activity creates a unique duplicate-payment
-
-                    problem. The PCard system behaves much more like a
-
-                    bank statement, while AP contains the invoice and
-
-                    payment activity we would normally use for duplicate
-
-                    review.
-
+                    PCard duplicates are tricky because the PCard data and AP data really weren't built to talk to each other. The same purchase can have a different vendor name, different dates, and completely different transaction details depending on which system you're looking at.
                 </p>
 
                 <p>
-
-                    During the latest audit, I identified that PCard
-
-                    transactions were a major source of duplication that
-
-                    previous review methods had not fully captured.
-
+                    I built a process that brings the two sides together and looks for likely matches using amount, cleaned-up vendor names, date proximity, transaction timing, and a weighted match score. I also built a review center so you can select an AP transaction and immediately see the PCard transactions that are actually worth investigating.
                 </p>
 
                 <p>
-
-                    The problem was that the two sets of data weren't
-
-                    designed to match each other. Even something as
-
-                    basic as a vendor name can look completely different
-
-                    between the two systems.
-
-                </p>
-
-                <p>
-
-                    I began developing a process to compare PCard and AP
-
-                    activity using fuzzy matching, approximate vendor-name
-
-                    matching, and other transaction criteria instead of
-
-                    relying on exact matches.
-
-                </p>
-
-                <p>
-
-                    That has given us visibility into an area where we
-
-                    previously had essentially no systematic way to
-
-                    compare the two payment streams.
-
+                    Looking back at Q3 and Q4 2025, the analysis identified approximately <strong>$200,000 in potential duplicate activity</strong> in an area where we previously didn't have a systematic way to compare the two payment streams.
                 </p>
 
                 <div class="project-image-wrap">
@@ -2641,6 +2457,7 @@
                         loading="lazy"
                     >
                 </a>
+                    <p class="project-image-caption">PCard Duplicate Review Center — AP-to-PCard candidate matching and risk-based review.</p>
                 </div>
 
                 <div class="tags">
@@ -3649,7 +3466,7 @@
 
         <div class="footer-links">
 
-            <a href="#" aria-label="GitHub">
+            <a href="https://github.com/sraven206-stack" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
 
                 <i class="fa-brands fa-github"></i>
 
